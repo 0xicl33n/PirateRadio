@@ -26,6 +26,7 @@ repeat_all = False
 merge_audio_in = False
 play_stereo = True
 music_dir = "/pirateradio"
+pifm_bin = "/root/PirateRadio/pifm"
 
 music_pipe_r,music_pipe_w = os.pipe()
 microphone_pipe_r,microphone_pipe_w = os.pipe()
@@ -157,7 +158,7 @@ def setup():
 def run_pifm(use_audio_in=False):
 	global fm_process
 	with open(os.devnull, "w") as dev_null:
-		fm_process = subprocess.Popen(["/root/pifm","-",str(frequency),"44100", "stereo" if play_stereo else "mono"], stdin=music_pipe_r, stdout=dev_null)
+		fm_process = subprocess.Popen(pifm_bin,"-",str(frequency),"44100", "stereo" if play_stereo else "mono"], stdin=music_pipe_r, stdout=dev_null)
 
 		#if use_audio_in == False:
 		#else:
