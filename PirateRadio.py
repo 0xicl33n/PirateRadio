@@ -26,6 +26,7 @@ repeat_all = False
 merge_audio_in = False
 play_stereo = True
 music_dir = "/pirateradio"
+# Please change this to the location of your pifm binary!
 pifm_bin = "/root/PirateRadio/pifm"
 
 music_pipe_r,music_pipe_w = os.pipe()
