@@ -12,7 +12,3 @@ Be sure and install the following before trying to run this script
 
 ```sudo apt-get install libav-tools```
 
-
-
-
--0xi
